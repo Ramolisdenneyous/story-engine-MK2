@@ -58,7 +58,7 @@ ASSET_PATH = Path("/app/docs/images")
 if ASSET_PATH.exists():
     app.mount("/assets", StaticFiles(directory=ASSET_PATH), name="assets")
 
-MUSIC_PATH = Path("/app/docs/Music")
+MUSIC_PATH = Path("/app/docs/music")
 if MUSIC_PATH.exists():
     app.mount("/music", StaticFiles(directory=MUSIC_PATH), name="music")
 

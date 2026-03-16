@@ -128,14 +128,11 @@ const SLOT_COLORS: Record<number, string> = {
 };
 
 const MUSIC_TRACKS = [
+  "Citadel of Rusted Banners (1).mp3",
   "Citadel of Rusted Banners.mp3",
-  "Citadel of Rusted Banners2.mp3",
+  "Cursed Village Menu (1).mp3",
   "Cursed Village Menu.mp3",
-  "Cursed Village Menu2.mp3",
   "Gallows of the Forgotten King.mp3",
-  "Gallows of the Forgotten King2.mp3",
-  "Torchlit War Map.mp3",
-  "Torchlit War Map2.mp3",
 ].map((fileName) => resolveApiUrl(`/music/${encodeURIComponent(fileName)}`));
 const TESTING_PASSWORD = "Rayis1cooldude";
 
