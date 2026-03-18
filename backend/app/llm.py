@@ -138,14 +138,14 @@ class OpenAIProvider(LLMProvider):
                 response = client.post(
                     f"{self.base_url}/images/edits",
                     headers=headers,
-                    data={"model": "gpt-image-1", "prompt": prompt_text, "size": "1024x1024"},
+                    data={"model": "gpt-image-1-mini", "prompt": prompt_text, "size": "1024x1024"},
                     files={"image": ("reference.png", reference_image_bytes, "image/png")},
                 )
             else:
                 response = client.post(
                     f"{self.base_url}/images/generations",
                     headers={**headers, "Content-Type": "application/json"},
-                    json={"model": "gpt-image-1", "prompt": prompt_text, "size": "1024x1024"},
+                    json={"model": "gpt-image-1-mini", "prompt": prompt_text, "size": "1024x1024"},
                 )
             response.raise_for_status()
             data = response.json()
